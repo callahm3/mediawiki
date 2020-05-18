@@ -1483,20 +1483,20 @@ CREATE INDEX /*i*/wl_user_notificationtimestamp ON /*_*/watchlist (wl_user, wl_n
 -- This table must be MyISAM; InnoDB does not support the needed
 -- fulltext index.
 --
-CREATE TABLE /*_*/searchindex (
-  -- Key to page_id
-  si_page int unsigned NOT NULL,
+-- CREATE TABLE /*_*/searchindex (
+--   -- Key to page_id
+--   si_page int unsigned NOT NULL,
 
-  -- Munged version of title
-  si_title varchar(255) NOT NULL default '',
+--   -- Munged version of title
+--   si_title varchar(255) NOT NULL default '',
 
-  -- Munged version of body text
-  si_text mediumtext NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+--   -- Munged version of body text
+--   si_text mediumtext NOT NULL
+-- ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-CREATE UNIQUE INDEX /*i*/si_page ON /*_*/searchindex (si_page);
-CREATE FULLTEXT INDEX /*i*/si_title ON /*_*/searchindex (si_title);
-CREATE FULLTEXT INDEX /*i*/si_text ON /*_*/searchindex (si_text);
+-- CREATE UNIQUE INDEX /*i*/si_page ON /*_*/searchindex (si_page);
+-- CREATE FULLTEXT INDEX /*i*/si_title ON /*_*/searchindex (si_title);
+-- CREATE FULLTEXT INDEX /*i*/si_text ON /*_*/searchindex (si_text);
 
 
 --
